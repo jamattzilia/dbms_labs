@@ -58,15 +58,17 @@
 
 ```
 C:\STUDENT
-└── D1 (d1.txt)
-    ├── D2 (d2.txt)
-    │   ├── D3 (d3.txt)
-    │   ├── D4 (d4.txt)
-    │   └── D5 (d5.txt)
-    └── D6 (d6.txt)
-        ├── D7 (d7.txt)
+├── D1 (d1.txt)
+│   └── D2 (d2.txt)
+│       ├── D3 (d3.txt)
+│       ├── D4 (d4.txt)
+│       └── D5 (d5.txt)
+└── D6 (d6.txt)
+    └── D7 (d7.txt)
         └── D8 (d8.txt)
 ```
+
+Каталоги `D1` и `D6` — два самостоятельных подкаталога `STUDENT`. Внутри `D1` находится только `D2`, а в нём — `D3`, `D4`, `D5`. Ветка `D6` — это цепочка вложенных каталогов: `D6` → `D7` → `D8` (каждый следующий каталог вложен в предыдущий, а не является его «соседом»).
 
 Каждый каталог `D1`–`D8` содержит одноимённый текстовый файл (`d1.txt`–`d8.txt`).
 
@@ -109,27 +111,27 @@ C:\STUDENT\D1\D2\D5>COPY CON d5.txt
 ^Z
 C:\STUDENT\D1\D2\D5>CD ..
 C:\STUDENT\D1\D2>CD ..
+C:\STUDENT\D1>CD ..
 
-C:\STUDENT\D1>MD D6
-C:\STUDENT\D1>CD D6
-C:\STUDENT\D1\D6>COPY CON d6.txt
+C:\STUDENT>MD D6
+C:\STUDENT>CD D6
+C:\STUDENT\D6>COPY CON d6.txt
 Файл каталога D6
 ^Z
 
-C:\STUDENT\D1\D6>MD D7
-C:\STUDENT\D1\D6>CD D7
-C:\STUDENT\D1\D6\D7>COPY CON d7.txt
+C:\STUDENT\D6>MD D7
+C:\STUDENT\D6>CD D7
+C:\STUDENT\D6\D7>COPY CON d7.txt
 Файл каталога D7
 ^Z
-C:\STUDENT\D1\D6\D7>CD ..
 
-C:\STUDENT\D1\D6>MD D8
-C:\STUDENT\D1\D6>CD D8
-C:\STUDENT\D1\D6\D8>COPY CON d8.txt
+C:\STUDENT\D6\D7>MD D8
+C:\STUDENT\D6\D7>CD D8
+C:\STUDENT\D6\D7\D8>COPY CON d8.txt
 Файл каталога D8
 ^Z
 
-C:\STUDENT\D1\D6\D8>CD \
+C:\STUDENT\D6\D7\D8>CD \
 C:\>
 ```
 
