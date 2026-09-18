@@ -18,7 +18,7 @@ Data used: **Doe John**, group **SISCCO-2502NS**.
 | File | Purpose |
 |---|---|
 | [`1_Doe.htm`](1_Doe.htm) | part 3-a: headings, font formatting |
-| [`2_Doe.htm`](2_Doe.htm) | part 3-a (step 6): paragraph formatting (Hamlet's monologue) |
+| [`2_Doe.htm`](2_Doe.htm) | part 3-a (step 6): paragraph formatting (Lorem Ipsum sample text) |
 | [`3_Doe.htm`](3_Doe.htm) | part 3-a (step 7) + 3-b (step 3): lists, bookmarks and hyperlinks |
 | [`4_Doe.htm`](4_Doe.htm) | part 3-b (steps 2, 4): image insertion and a hyperlink on an image |
 | `images/arrow1.svg`, `arrow2.svg`, `arrow3.svg` | substitute graphic files for `Arrows1.wmf`, `Arrows2.wmf`, `Arrows3.wmf` (the WMF format is not supported by modern browsers, so SVG was used instead) |
@@ -90,24 +90,24 @@ A new document was created; the text of the first two lines is center-aligned:
 ```html
 <P ALIGN="CENTER">
 Приветствую Вас на моей второй web-страничке! <BR>
-Монолог Гамлета
+Lorem Ipsum
 </P>
 ```
 
-(These two lines are the greeting text and section heading dictated by the assignment — "Welcome to my second web page!" / "Hamlet's monologue".)
+(The first line is the greeting text dictated by the assignment — "Welcome to my second web page!". The original methodical guide suggested a Hamlet's-monologue paraphrase as sample text for this section; it was replaced here with the classic Lorem Ipsum filler text, since the point of the exercise is paragraph formatting, not the specific wording.)
 
-A bookmark named `Mono` is placed before the monologue. The monologue is formatted as a paragraph with justified alignment (`JUSTIFY`) and bounded above and below by horizontal rules (`<HR>`):
+A bookmark named `Mono` is placed before the sample paragraph. The text is formatted as a paragraph with justified alignment (`JUSTIFY`) and bounded above and below by horizontal rules (`<HR>`):
 
 ```html
 <A NAME="Mono"></A>
 <HR SIZE="2">
 <P ALIGN="JUSTIFY">
-To be or not to be - here in what a question. ...
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, ...
 </P>
 <HR SIZE="2">
 ```
 
-The monologue text is then duplicated, split into lines with `<BR>`, and center-aligned — this layout stays intact when the browser window is resized, unlike the justified version.
+The same text is then duplicated, split into lines with `<BR>`, and center-aligned — this layout stays intact when the browser window is resized, unlike the justified version.
 
 Final file — [`2_Doe.htm`](2_Doe.htm).
 
