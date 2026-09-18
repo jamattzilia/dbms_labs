@@ -13,6 +13,8 @@
 
 Data used: **Doe John**, group **SISCCO-2502NS**.
 
+All tags and attributes in the markup are written in lowercase.
+
 ## Work structure
 
 | File | Purpose |
@@ -28,22 +30,22 @@ Data used: **Doe John**, group **SISCCO-2502NS**.
 ### Steps 1–2. Basic structure (`1_Doe.htm`)
 
 ```html
-<HTML>
-<HEAD> <TITLE> Doe </TITLE>
-</HEAD>
-<BODY>
+<html>
+<head> <title> Doe </title>
+</head>
+<body>
 I welcome you on my first web page!
-</BODY>
-</HTML>
+</body>
+</html>
 ```
 
 ### Step 3. Signature and line break
 
-A signature was added after the greeting phrase using the `<BR>` tag (each part starts on a new line):
+A signature was added after the greeting phrase using the `<br>` tag (each part starts on a new line):
 
 ```html
-I welcome you on my first web page! <BR>
-Student of the SISCCO-2502NS group <BR>
+I welcome you on my first web page! <br>
+Student of the SISCCO-2502NS group <br>
 Doe John
 ```
 
@@ -52,33 +54,33 @@ Doe John
 The lines were first styled as `<h1>/<h6>/<h4>`, then changed to `<h2>/<h5>/<h3>` (final version):
 
 ```html
-<H2>I welcome you on my first web page!</H2>
-<H5>Student of the SISCCO-2502NS group</H5>
-<H3>Doe John</H3>
+<h2>I welcome you on my first web page!</h2>
+<h5>Student of the SISCCO-2502NS group</h5>
+<h3>Doe John</h3>
 ```
 
 ### Step 5. Font formatting
 
 A line with the Russian sample phrase from the assignment — *«Нас утро встречает прохладой»* ("Morning greets us with coolness") — was added and formatted as required by the sample:
-- **Нас** ("Us") — struck-through text (`<S>`);
-- **утро** ("morning") — bold italic, each letter in a different color (`<B><I><FONT COLOR="...">`);
-- **встречает** ("greets") — underlined, small text (`<U><SMALL>`);
+- **Нас** ("Us") — struck-through text (`<s>`);
+- **утро** ("morning") — bold italic, each letter in a different color (`<b><i><font color="...">`);
+- **встречает** ("greets") — underlined, small text (`<u><small>`);
 - **про*хлад*ой** ("coolness") — the fragment "хлад" in italic red, "ой" in blue.
 
 This exercise specifically tests per-letter/per-fragment font formatting on Cyrillic text, so the Russian phrase itself is kept as dictated by the assignment rather than translated.
 
-The signature line (`Student of the SISCCO-2502NS group` / `Doe John`) is set in italics with a relative font-size increase: `<FONT SIZE="+2"><I> ... </I></FONT>`.
+The signature line (`Student of the SISCCO-2502NS group` / `Doe John`) is set in italics with a relative font-size increase: `<font size="+2"><i> ... </i></font>`.
 
 A bookmark named `Morning` was placed before this line (used later for a hyperlink from `3_Doe.htm`):
 
 ```html
-<A NAME="Morning"></A>
-<P>
-<S>Нас</S>
-<B><I><FONT COLOR="red">у</FONT><FONT COLOR="green">т</FONT><FONT COLOR="blue">р</FONT><FONT COLOR="purple">о</FONT></I></B>
-<U><SMALL>встречает</SMALL></U>
-про<I><FONT COLOR="red">хлад</FONT></I><FONT COLOR="blue">ой</FONT>
-</P>
+<a name="Morning"></a>
+<p>
+<s>Нас</s>
+<b><i><font color="red">у</font><font color="green">т</font><font color="blue">р</font><font color="purple">о</font></i></b>
+<u><small>встречает</small></u>
+про<i><font color="red">хлад</font></i><font color="blue">ой</font>
+</p>
 ```
 
 Final file — [`1_Doe.htm`](1_Doe.htm).
@@ -88,26 +90,26 @@ Final file — [`1_Doe.htm`](1_Doe.htm).
 A new document was created; the text of the first two lines is center-aligned:
 
 ```html
-<P ALIGN="CENTER">
-Приветствую Вас на моей второй web-странице! <BR>
+<p align="center">
+Приветствую Вас на моей второй web-странице! <br>
 Lorem Ipsum
-</P>
+</p>
 ```
 
 (The first line is the greeting text dictated by the assignment — "Welcome to my second web page!". The original methodical guide suggested a Hamlet's-monologue paraphrase as sample text for this section; it was replaced here with the classic Lorem Ipsum filler text, since the point of the exercise is paragraph formatting, not the specific wording.)
 
-A bookmark named `Mono` is placed before the sample paragraph. The text is formatted as a paragraph with justified alignment (`JUSTIFY`) and bounded above and below by horizontal rules (`<HR>`):
+A bookmark named `Mono` is placed before the sample paragraph. The text is formatted as a paragraph with justified alignment (`justify`) and bounded above and below by horizontal rules (`<hr>`):
 
 ```html
-<A NAME="Mono"></A>
-<HR SIZE="2">
-<P ALIGN="JUSTIFY">
+<a name="Mono"></a>
+<hr size="2">
+<p align="justify">
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, ...
-</P>
-<HR SIZE="2">
+</p>
+<hr size="2">
 ```
 
-The same text is then duplicated, split into lines with `<BR>`, and center-aligned — this layout stays intact when the browser window is resized, unlike the justified version.
+The same text is then duplicated, split into lines with `<br>`, and center-aligned — this layout stays intact when the browser window is resized, unlike the justified version.
 
 Final file — [`2_Doe.htm`](2_Doe.htm).
 
@@ -118,26 +120,26 @@ A document with a greeting and a "Fonts, Titles, Paragraphs" list was created �
 A "mixed" list was also created: an outer ordered list (`Fonts`, `Headings`, `Paragraphs`) with nested unordered sub-lists:
 
 ```html
-<OL>
-<LI>Fonts
-  <UL>
-    <LI>Size</LI>
-    <LI>Color</LI>
-    <LI>To a set</LI>
-    <LI>Indexes</LI>
-  </UL>
-</LI>
-<LI>Headings
-  <UL><LI>From 1st to the 6th level</LI></UL>
-</LI>
-<LI>Paragraphs
-  <UL>
-    <LI>Alignment</LI>
-    <LI>A rupture of lines in the paragraph</LI>
-    <LI>With reformatting use.</LI>
-  </UL>
-</LI>
-</OL>
+<ol>
+<li>Fonts
+  <ul>
+    <li>Size</li>
+    <li>Color</li>
+    <li>To a set</li>
+    <li>Indexes</li>
+  </ul>
+</li>
+<li>Headings
+  <ul><li>From 1st to the 6th level</li></ul>
+</li>
+<li>Paragraphs
+  <ul>
+    <li>Alignment</li>
+    <li>A rupture of lines in the paragraph</li>
+    <li>With reformatting use.</li>
+  </ul>
+</li>
+</ol>
 ```
 
 Final file — [`3_Doe.htm`](3_Doe.htm).
@@ -147,13 +149,13 @@ Final file — [`3_Doe.htm`](3_Doe.htm).
 ### Inserting images (`4_Doe.htm`)
 
 The document `2_Doe.htm` was opened, an image `Arrows1` (`images/arrow1.svg`) sized 50×50 pixels was added at the beginning, and the result was saved under the name `4_Doe.htm`. Then:
-- the image was given `ALIGN="right"` alignment;
-- an image `Arrows2` (`images/arrow2.svg`) sized 100×100 pixels was added at the end of the document, with the tooltip `ALT="Figure 2"`.
+- the image was given `align="right"` alignment;
+- an image `Arrows2` (`images/arrow2.svg`) sized 100×100 pixels was added at the end of the document, with the tooltip `alt="Figure 2"`.
 
 ```html
-<IMG SRC="images/arrow1.svg" WIDTH="50" HEIGHT="50" ALIGN="right" ALT="to Return">
+<img src="images/arrow1.svg" width="50" height="50" align="right" alt="to Return">
 ...
-<IMG SRC="images/arrow2.svg" WIDTH="100" HEIGHT="100" ALIGN="left" ALT="Figure 2">
+<img src="images/arrow2.svg" width="100" height="100" align="left" alt="Figure 2">
 ```
 
 ### Bookmarks and hyperlinks (`3_Doe.htm`)
@@ -162,15 +164,15 @@ Hyperlinks were assigned to the unordered `Fonts / Titles / Paragraphs` list:
 
 | Word | Link |
 |---|---|
-| `Fonts` | to the `Morning` bookmark in `1_Doe.htm` — `<A HREF="1_Doe.htm#Morning">Fonts</A>` |
-| `Titles` (Headings) | to the `Hello` bookmark at the beginning of the current document `3_Doe.htm` — `<A HREF="#Hello">Titles</A>` |
-| `Paragraphs` | to the document `2_Doe.htm` — `<A HREF="2_Doe.htm">Paragraphs</A>` |
+| `Fonts` | to the `Morning` bookmark in `1_Doe.htm` — `<a href="1_Doe.htm#Morning">Fonts</a>` |
+| `Titles` (Headings) | to the `Hello` bookmark at the beginning of the current document `3_Doe.htm` — `<a href="#Hello">Titles</a>` |
+| `Paragraphs` | to the document `2_Doe.htm` — `<a href="2_Doe.htm">Paragraphs</a>` |
 
 A `Hello` bookmark was created at the beginning of `3_Doe.htm`:
 
 ```html
-<A NAME="Hello"></A>
-<P>Приветствую Вас на моей третьей web-странице!</P>
+<a name="Hello"></a>
+<p>Приветствую Вас на моей третьей web-странице!</p>
 ```
 
 (The line means "Welcome to my third web page!", as dictated by the assignment.)
@@ -178,17 +180,17 @@ A `Hello` bookmark was created at the beginning of `3_Doe.htm`:
 In the mixed list, the word `reformatting` is linked to the `Mono` bookmark in `2_Doe.htm`:
 
 ```html
-<LI>With <A HREF="2_Doe.htm#Mono">reformatting</A> use.</LI>
+<li>With <a href="2_Doe.htm#Mono">reformatting</a> use.</li>
 ```
 
 ### Hyperlink on an image (`4_Doe.htm`)
 
-The `Arrows1` image was given the tooltip `ALT="to Return"` and a hyperlink to the document `3_Doe.htm`:
+The `Arrows1` image was given the tooltip `alt="to Return"` and a hyperlink to the document `3_Doe.htm`:
 
 ```html
-<A HREF="3_Doe.htm">
-  <IMG SRC="images/arrow1.svg" WIDTH="50" HEIGHT="50" ALIGN="right" ALT="to Return">
-</A>
+<a href="3_Doe.htm">
+  <img src="images/arrow1.svg" width="50" height="50" align="right" alt="to Return">
+</a>
 ```
 
 ## Verification
@@ -205,36 +207,38 @@ All four documents are interconnected through hyperlinks:
 
 Opening `1_Doe.htm`, `2_Doe.htm`, `3_Doe.htm`, `4_Doe.htm` in a browser and following every link confirms that the bookmarks and hyperlinks work correctly.
 
+Bookmark names (`Morning`, `Mono`, `Hello`) in the `name="..."` / `href="#..."` attributes are kept as originally cased, since bookmark-name matching in `href="#..."` is case-sensitive in some browsers — only the tag and attribute names themselves were lowercased.
+
 ## Reference tables (from the lab guide)
 
 ### Main font- and paragraph-formatting tags
 
 | Purpose | Tag |
 |---|---|
-| Heading, level № | `<H№> text </H№>` (№ from 1 to 6) |
-| Paragraph | `<P> text </P>` |
-| Line break | `<BR>` |
-| Paragraph alignment | `<P ALIGN="LEFT\|CENTER\|RIGHT\|JUSTIFY">` |
-| Horizontal rule | `<HR SIZE="?">` |
-| Bold / italic / underline / strikethrough | `<B>`, `<I>`, `<U>`, `<S>` |
-| Larger / smaller font | `<BIG>`, `<SMALL>` |
-| Superscript / subscript | `<SUP>`, `<SUB>` |
-| Font size | `<FONT SIZE="?">` (1–7, or relative, e.g. `+2`) |
-| Font color | `<FONT COLOR="color_name\|#RRGGBB">` |
-| Ordered / unordered list | `<OL>`/`<UL>` with `<LI>` items |
+| Heading, level № | `<h№> text </h№>` (№ from 1 to 6) |
+| Paragraph | `<p> text </p>` |
+| Line break | `<br>` |
+| Paragraph alignment | `<p align="left\|center\|right\|justify">` |
+| Horizontal rule | `<hr size="?">` |
+| Bold / italic / underline / strikethrough | `<b>`, `<i>`, `<u>`, `<s>` |
+| Larger / smaller font | `<big>`, `<small>` |
+| Superscript / subscript | `<sup>`, `<sub>` |
+| Font size | `<font size="?">` (1–7, or relative, e.g. `+2`) |
+| Font color | `<font color="color_name\|#rrggbb">` |
+| Ordered / unordered list | `<ol>`/`<ul>` with `<li>` items |
 
 ### Main tags for images, bookmarks and links
 
 | Purpose | Tag |
 |---|---|
-| Insert an image | `<IMG SRC="file" WIDTH="width" HEIGHT="height">` |
-| Align an image | `<IMG ... ALIGN="left\|right\|top\|bottom">` |
-| Tooltip text | `<IMG ... ALT="text">` |
-| Link to another page | `<A HREF="page"> text </A>` |
-| Link to a bookmark in another document | `<A HREF="page#bookmark"> text </A>` |
-| Link to a bookmark in the current document | `<A HREF="#bookmark"> text </A>` |
-| Define a bookmark | `<A NAME="bookmark_name"></A>` |
+| Insert an image | `<img src="file" width="width" height="height">` |
+| Align an image | `<img ... align="left\|right\|top\|bottom">` |
+| Tooltip text | `<img ... alt="text">` |
+| Link to another page | `<a href="page"> text </a>` |
+| Link to a bookmark in another document | `<a href="page#bookmark"> text </a>` |
+| Link to a bookmark in the current document | `<a href="#bookmark"> text </a>` |
+| Define a bookmark | `<a name="bookmark_name"></a>` |
 
 ## Conclusion
 
-This laboratory work covered creating simple HTML documents in a text editor: document structure (`HTML/HEAD/TITLE/BODY`), font formatting (bold, italic, underline, strikethrough, color, size), paragraph formatting (alignment, horizontal rules, line breaks), creating ordered, unordered, and nested lists, inserting images with a defined size, alignment, and tooltip, and creating bookmarks and hyperlinks — both between different documents and within a single document.
+This laboratory work covered creating simple HTML documents in a text editor: document structure (`html/head/title/body`), font formatting (bold, italic, underline, strikethrough, color, size), paragraph formatting (alignment, horizontal rules, line breaks), creating ordered, unordered, and nested lists, inserting images with a defined size, alignment, and tooltip, and creating bookmarks and hyperlinks — both between different documents and within a single document.
