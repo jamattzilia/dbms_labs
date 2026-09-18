@@ -89,7 +89,7 @@ A new document was created; the text of the first two lines is center-aligned:
 
 ```html
 <P ALIGN="CENTER">
-Приветствую Вас на моей второй web-страничке! <BR>
+Приветствую Вас на моей второй web-странице! <BR>
 Lorem Ipsum
 </P>
 ```
@@ -170,7 +170,7 @@ A `Hello` bookmark was created at the beginning of `3_Doe.htm`:
 
 ```html
 <A NAME="Hello"></A>
-<P>Приветствую Вас на моей третьей web-страничке!</P>
+<P>Приветствую Вас на моей третьей web-странице!</P>
 ```
 
 (The line means "Welcome to my third web page!", as dictated by the assignment.)
