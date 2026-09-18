@@ -1,31 +1,31 @@
-# Лабораторная работа №3
+# Laboratory Work No. 3
 
-**Тема:** 3-a. Создание элементарного HTML-документа. Форматирование шрифта и абзаца.
-3-b. Вставка в HTML-документ рисунков. Создание закладок и гиперссылок.
+**Subject:** 3-a. Creation of the elementary HTML document. Formatting of a font and paragraph.
+3-b. Insertion of figures in the HTML document. Creation of bookmarks and hyperlinks.
 
-**Цель работы:**
-- научиться создавать простейший гипертекстовый документ средствами текстового редактора Notepad;
-- научиться использовать теги форматирования шрифта и абзаца;
-- научиться вставлять рисунки в HTML-документ;
-- научиться создавать закладки и гиперссылки.
+**Purpose:**
+- learn to create the elementary hypertext document by means of the Notepad text editor;
+- learn to use font- and paragraph-formatting tags;
+- learn to insert pictures into an HTML document;
+- learn to create bookmarks and hyperlinks.
 
-**Вариант:** в данной лабораторной работе вариантов нет — задание единое для всех студентов, персональные данные (фамилия, имя, номер группы) подставляются в документ индивидуально.
+**Variant:** this laboratory work has no variants — the task is the same for every student; personal data (surname, first name, group number) is substituted into the document individually.
 
-Использованные данные: **Doe John**, группа **SISCCO-2502NS**.
+Data used: **Doe John**, group **SISCCO-2502NS**.
 
-## Структура работы
+## Work structure
 
-| Файл | Назначение |
+| File | Purpose |
 |---|---|
-| [`1_Doe.htm`](1_Doe.htm) | часть 3-a: заголовки, форматирование шрифта |
-| [`2_Doe.htm`](2_Doe.htm) | часть 3-a (п.6): форматирование абзацев (монолог Гамлета) |
-| [`3_Doe.htm`](3_Doe.htm) | часть 3-a (п.7) + 3-b (п.3): списки, закладки и гиперссылки |
-| [`4_Doe.htm`](4_Doe.htm) | часть 3-b (п.2, 4): вставка рисунков и гиперссылка на рисунке |
-| `images/arrow1.svg`, `arrow2.svg`, `arrow3.svg` | графические файлы-заменители `Arrows1.wmf`, `Arrows2.wmf`, `Arrows3.wmf` (формат WMF не поддерживается современными браузерами, поэтому использован SVG) |
+| [`1_Doe.htm`](1_Doe.htm) | part 3-a: headings, font formatting |
+| [`2_Doe.htm`](2_Doe.htm) | part 3-a (step 6): paragraph formatting (Hamlet's monologue) |
+| [`3_Doe.htm`](3_Doe.htm) | part 3-a (step 7) + 3-b (step 3): lists, bookmarks and hyperlinks |
+| [`4_Doe.htm`](4_Doe.htm) | part 3-b (steps 2, 4): image insertion and a hyperlink on an image |
+| `images/arrow1.svg`, `arrow2.svg`, `arrow3.svg` | substitute graphic files for `Arrows1.wmf`, `Arrows2.wmf`, `Arrows3.wmf` (the WMF format is not supported by modern browsers, so SVG was used instead) |
 
-## Часть 3-a. Создание элементарного HTML-документа
+## Part 3-a. Creation of the elementary HTML document
 
-### Шаг 1–2. Базовая структура (`1_Doe.htm`)
+### Steps 1–2. Basic structure (`1_Doe.htm`)
 
 ```html
 <HTML>
@@ -37,9 +37,9 @@ I welcome you on my first web page!
 </HTML>
 ```
 
-### Шаг 3. Подпись и перевод строки
+### Step 3. Signature and line break
 
-После фразы приветствия добавлена подпись через тег `<BR>` (каждая часть — с новой строки):
+A signature was added after the greeting phrase using the `<BR>` tag (each part starts on a new line):
 
 ```html
 I welcome you on my first web page! <BR>
@@ -47,9 +47,9 @@ Student of the SISCCO-2502NS group <BR>
 Doe John
 ```
 
-### Шаг 4. Оформление заголовками (стили Heading)
+### Step 4. Formatting with headings (Heading styles)
 
-Строки последовательно оформлены как `<h1>/<h6>/<h4>`, а затем изменены на `<h2>/<h5>/<h3>` (итоговый вариант):
+The lines were first styled as `<h1>/<h6>/<h4>`, then changed to `<h2>/<h5>/<h3>` (final version):
 
 ```html
 <H2>I welcome you on my first web page!</H2>
@@ -57,17 +57,19 @@ Doe John
 <H3>Doe John</H3>
 ```
 
-### Шаг 5. Форматирование шрифта
+### Step 5. Font formatting
 
-Добавлена строка «Нас утро встречает прохладой» и оформлена по образцу:
-- **Нас** — зачёркнутый текст (`<S>`);
-- **утро** — жирный курсив, каждая буква своим цветом (`<B><I><FONT COLOR="...">`);
-- **встречает** — подчёркнутый уменьшенный текст (`<U><SMALL>`);
-- **про*хлад*ой** — «хлад» курсивом красного цвета, «ой» — синим.
+A line with the Russian sample phrase from the assignment — *«Нас утро встречает прохладой»* ("Morning greets us with coolness") — was added and formatted as required by the sample:
+- **Нас** ("Us") — struck-through text (`<S>`);
+- **утро** ("morning") — bold italic, each letter in a different color (`<B><I><FONT COLOR="...">`);
+- **встречает** ("greets") — underlined, small text (`<U><SMALL>`);
+- **про*хлад*ой** ("coolness") — the fragment "хлад" in italic red, "ой" in blue.
 
-Строка подписи (`Student of the SISCCO-2502NS group` / `Doe John`) оформлена курсивом с относительным увеличением размера шрифта: `<FONT SIZE="+2"><I> ... </I></FONT>`.
+This exercise specifically tests per-letter/per-fragment font formatting on Cyrillic text, so the Russian phrase itself is kept as dictated by the assignment rather than translated.
 
-Перед этой строкой поставлена закладка `Morning` (используется позже для гиперссылки из `3_Doe.htm`):
+The signature line (`Student of the SISCCO-2502NS group` / `Doe John`) is set in italics with a relative font-size increase: `<FONT SIZE="+2"><I> ... </I></FONT>`.
+
+A bookmark named `Morning` was placed before this line (used later for a hyperlink from `3_Doe.htm`):
 
 ```html
 <A NAME="Morning"></A>
@@ -79,11 +81,11 @@ Doe John
 </P>
 ```
 
-Итоговый файл — [`1_Doe.htm`](1_Doe.htm).
+Final file — [`1_Doe.htm`](1_Doe.htm).
 
-### Шаг 6. Форматирование абзацев (`2_Doe.htm`)
+### Step 6. Paragraph formatting (`2_Doe.htm`)
 
-Создан новый документ, текст первых двух строк выровнен по центру:
+A new document was created; the text of the first two lines is center-aligned:
 
 ```html
 <P ALIGN="CENTER">
@@ -92,7 +94,9 @@ Doe John
 </P>
 ```
 
-Перед монологом установлена закладка `Mono`. Монолог оформлен как абзац с выравниванием по ширине (`JUSTIFY`) и ограничен горизонтальными линиями (`<HR>`) сверху и снизу:
+(These two lines are the greeting text and section heading dictated by the assignment — "Welcome to my second web page!" / "Hamlet's monologue".)
+
+A bookmark named `Mono` is placed before the monologue. The monologue is formatted as a paragraph with justified alignment (`JUSTIFY`) and bounded above and below by horizontal rules (`<HR>`):
 
 ```html
 <A NAME="Mono"></A>
@@ -103,15 +107,15 @@ To be or not to be - here in what a question. ...
 <HR SIZE="2">
 ```
 
-Далее монолог продублирован, разбит на строки тегом `<BR>` и выровнен по центру — эффект сохраняется при изменении размеров окна браузера, в отличие от исходного варианта с выравниванием по ширине.
+The monologue text is then duplicated, split into lines with `<BR>`, and center-aligned — this layout stays intact when the browser window is resized, unlike the justified version.
 
-Итоговый файл — [`2_Doe.htm`](2_Doe.htm).
+Final file — [`2_Doe.htm`](2_Doe.htm).
 
-### Шаг 7. Оформление списков (`3_Doe.htm`)
+### Step 7. List formatting (`3_Doe.htm`)
 
-Создан документ с приветствием и списком «Fonts, Titles, Paragraphs» — сначала нумерованным (`<ol>`), затем маркированным (`<ul>`), как того требует задание.
+A document with a greeting and a "Fonts, Titles, Paragraphs" list was created — first as an ordered list (`<ol>`), then changed to an unordered (bulleted) list (`<ul>`), as required by the assignment.
 
-Также создан «смешанный» список: внешний нумерованный список (`Fonts`, `Headings`, `Paragraphs`) с вложенными маркированными подсписками:
+A "mixed" list was also created: an outer ordered list (`Fonts`, `Headings`, `Paragraphs`) with nested unordered sub-lists:
 
 ```html
 <OL>
@@ -136,15 +140,15 @@ To be or not to be - here in what a question. ...
 </OL>
 ```
 
-Итоговый файл — [`3_Doe.htm`](3_Doe.htm).
+Final file — [`3_Doe.htm`](3_Doe.htm).
 
-## Часть 3-b. Вставка рисунков, закладки и гиперссылки
+## Part 3-b. Inserting images, bookmarks and hyperlinks
 
-### Вставка рисунков (`4_Doe.htm`)
+### Inserting images (`4_Doe.htm`)
 
-Документ `2_Doe.htm` открыт, в начало добавлен рисунок `Arrows1` (`images/arrow1.svg`) размером 50×50 пикселей, результат сохранён под именем `4_Doe.htm`. Затем:
-- рисунку задано выравнивание `ALIGN="right"`;
-- в конец документа добавлен рисунок `Arrows2` (`images/arrow2.svg`) размером 100×100 пикселей с всплывающей подсказкой `ALT="Figure 2"`.
+The document `2_Doe.htm` was opened, an image `Arrows1` (`images/arrow1.svg`) sized 50×50 pixels was added at the beginning, and the result was saved under the name `4_Doe.htm`. Then:
+- the image was given `ALIGN="right"` alignment;
+- an image `Arrows2` (`images/arrow2.svg`) sized 100×100 pixels was added at the end of the document, with the tooltip `ALT="Figure 2"`.
 
 ```html
 <IMG SRC="images/arrow1.svg" WIDTH="50" HEIGHT="50" ALIGN="right" ALT="to Return">
@@ -152,32 +156,34 @@ To be or not to be - here in what a question. ...
 <IMG SRC="images/arrow2.svg" WIDTH="100" HEIGHT="100" ALIGN="left" ALT="Figure 2">
 ```
 
-### Закладки и гиперссылки (`3_Doe.htm`)
+### Bookmarks and hyperlinks (`3_Doe.htm`)
 
-В маркированном списке `Fonts / Titles / Paragraphs` расставлены гиперссылки:
+Hyperlinks were assigned to the unordered `Fonts / Titles / Paragraphs` list:
 
-| Слово | Ссылка |
+| Word | Link |
 |---|---|
-| `Fonts` | на закладку `Morning` в `1_Doe.htm` — `<A HREF="1_Doe.htm#Morning">Fonts</A>` |
-| `Titles` (Headings) | на закладку `Hello` в начале текущего документа `3_Doe.htm` — `<A HREF="#Hello">Titles</A>` |
-| `Paragraphs` | на документ `2_Doe.htm` — `<A HREF="2_Doe.htm">Paragraphs</A>` |
+| `Fonts` | to the `Morning` bookmark in `1_Doe.htm` — `<A HREF="1_Doe.htm#Morning">Fonts</A>` |
+| `Titles` (Headings) | to the `Hello` bookmark at the beginning of the current document `3_Doe.htm` — `<A HREF="#Hello">Titles</A>` |
+| `Paragraphs` | to the document `2_Doe.htm` — `<A HREF="2_Doe.htm">Paragraphs</A>` |
 
-В начале `3_Doe.htm` создана закладка `Hello`:
+A `Hello` bookmark was created at the beginning of `3_Doe.htm`:
 
 ```html
 <A NAME="Hello"></A>
 <P>Приветствую Вас на моей третьей web-страничке!</P>
 ```
 
-В смешанном списке слово `reformatting` связано гиперссылкой с закладкой `Mono` в документе `2_Doe.htm`:
+(The line means "Welcome to my third web page!", as dictated by the assignment.)
+
+In the mixed list, the word `reformatting` is linked to the `Mono` bookmark in `2_Doe.htm`:
 
 ```html
 <LI>With <A HREF="2_Doe.htm#Mono">reformatting</A> use.</LI>
 ```
 
-### Гиперссылка на рисунке (`4_Doe.htm`)
+### Hyperlink on an image (`4_Doe.htm`)
 
-Рисунку `Arrows1` присвоена всплывающая подсказка `ALT="to Return"` и гиперссылка на документ `3_Doe.htm`:
+The `Arrows1` image was given the tooltip `ALT="to Return"` and a hyperlink to the document `3_Doe.htm`:
 
 ```html
 <A HREF="3_Doe.htm">
@@ -185,50 +191,50 @@ To be or not to be - here in what a question. ...
 </A>
 ```
 
-## Проверка
+## Verification
 
-Все четыре документа взаимосвязаны гиперссылками:
+All four documents are interconnected through hyperlinks:
 
 ```
 3_Doe.htm --Fonts--> 1_Doe.htm#Morning
-3_Doe.htm --Titles--> 3_Doe.htm#Hello (переход в начало текущей страницы)
+3_Doe.htm --Titles--> 3_Doe.htm#Hello (jump to the top of the current page)
 3_Doe.htm --Paragraphs--> 2_Doe.htm
 3_Doe.htm --reformatting--> 2_Doe.htm#Mono
-4_Doe.htm --рисунок Arrows1--> 3_Doe.htm
+4_Doe.htm --Arrows1 image--> 3_Doe.htm
 ```
 
-Открытие `1_Doe.htm`, `2_Doe.htm`, `3_Doe.htm`, `4_Doe.htm` в браузере и переход по всем ссылкам подтверждает корректность работы закладок и гиперссылок.
+Opening `1_Doe.htm`, `2_Doe.htm`, `3_Doe.htm`, `4_Doe.htm` in a browser and following every link confirms that the bookmarks and hyperlinks work correctly.
 
-## Справочные таблицы (из методички)
+## Reference tables (from the lab guide)
 
-### Основные теги форматирования шрифта и абзаца
+### Main font- and paragraph-formatting tags
 
-| Назначение | Тег |
+| Purpose | Tag |
 |---|---|
-| Заголовок уровня № | `<H№> текст </H№>` (№ от 1 до 6) |
-| Абзац | `<P> текст </P>` |
-| Перевод строки | `<BR>` |
-| Выравнивание абзаца | `<P ALIGN="LEFT\|CENTER\|RIGHT\|JUSTIFY">` |
-| Горизонтальная линия | `<HR SIZE="?">` |
-| Жирный / курсив / подчёркнутый / зачёркнутый | `<B>`, `<I>`, `<U>`, `<S>` |
-| Увеличенный / уменьшенный шрифт | `<BIG>`, `<SMALL>` |
-| Верхний / нижний индекс | `<SUP>`, `<SUB>` |
-| Размер шрифта | `<FONT SIZE="?">` (1–7 или относительно, напр. `+2`) |
-| Цвет шрифта | `<FONT COLOR="имя_цвета\|#RRGGBB">` |
-| Нумерованный / маркированный список | `<OL>`/`<UL>` c элементами `<LI>` |
+| Heading, level № | `<H№> text </H№>` (№ from 1 to 6) |
+| Paragraph | `<P> text </P>` |
+| Line break | `<BR>` |
+| Paragraph alignment | `<P ALIGN="LEFT\|CENTER\|RIGHT\|JUSTIFY">` |
+| Horizontal rule | `<HR SIZE="?">` |
+| Bold / italic / underline / strikethrough | `<B>`, `<I>`, `<U>`, `<S>` |
+| Larger / smaller font | `<BIG>`, `<SMALL>` |
+| Superscript / subscript | `<SUP>`, `<SUB>` |
+| Font size | `<FONT SIZE="?">` (1–7, or relative, e.g. `+2`) |
+| Font color | `<FONT COLOR="color_name\|#RRGGBB">` |
+| Ordered / unordered list | `<OL>`/`<UL>` with `<LI>` items |
 
-### Основные теги рисунков, закладок и ссылок
+### Main tags for images, bookmarks and links
 
-| Назначение | Тег |
+| Purpose | Tag |
 |---|---|
-| Вставка рисунка | `<IMG SRC="файл" WIDTH="ширина" HEIGHT="высота">` |
-| Выравнивание рисунка | `<IMG ... ALIGN="left\|right\|top\|bottom">` |
-| Всплывающая подсказка | `<IMG ... ALT="текст">` |
-| Ссылка на другую страницу | `<A HREF="страница"> текст </A>` |
-| Ссылка на закладку в другом документе | `<A HREF="страница#закладка"> текст </A>` |
-| Ссылка на закладку в текущем документе | `<A HREF="#закладка"> текст </A>` |
-| Определение закладки | `<A NAME="имя_закладки"></A>` |
+| Insert an image | `<IMG SRC="file" WIDTH="width" HEIGHT="height">` |
+| Align an image | `<IMG ... ALIGN="left\|right\|top\|bottom">` |
+| Tooltip text | `<IMG ... ALT="text">` |
+| Link to another page | `<A HREF="page"> text </A>` |
+| Link to a bookmark in another document | `<A HREF="page#bookmark"> text </A>` |
+| Link to a bookmark in the current document | `<A HREF="#bookmark"> text </A>` |
+| Define a bookmark | `<A NAME="bookmark_name"></A>` |
 
-## Вывод
+## Conclusion
 
-В ходе выполнения лабораторной работы освоено создание простейших HTML-документов в текстовом редакторе: структура документа (`HTML/HEAD/TITLE/BODY`), форматирование шрифта (жирный, курсив, подчёркивание, зачёркивание, цвет, размер), форматирование абзацев (выравнивание, разделительные линии, перевод строки), создание нумерованных, маркированных и вложенных списков, вставка рисунков с заданием размера, выравнивания и всплывающей подсказки, а также создание закладок и гиперссылок — как между разными документами, так и внутри одного документа.
+This laboratory work covered creating simple HTML documents in a text editor: document structure (`HTML/HEAD/TITLE/BODY`), font formatting (bold, italic, underline, strikethrough, color, size), paragraph formatting (alignment, horizontal rules, line breaks), creating ordered, unordered, and nested lists, inserting images with a defined size, alignment, and tooltip, and creating bookmarks and hyperlinks — both between different documents and within a single document.
